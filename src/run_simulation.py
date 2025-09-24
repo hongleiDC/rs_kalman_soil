@@ -1,4 +1,5 @@
-"""End-to-end simulation for the GNSS-R soil moisture EnKF prototype."""
+# -*- coding: utf-8 -*-
+"""GNSS-R 土壤湿度 EnKF 原型: 命令行模拟入口。"""
 
 from __future__ import annotations
 
@@ -13,6 +14,8 @@ from EnsembleKalmanFilter import EnsembleKalmanFilter
 
 
 def generate_forcings(num_steps: int, seed: int = 7) -> list[ForcingInputs]:
+    """构造具有季节周期的气象强迫序列。"""
+
     rng = np.random.default_rng(seed)
     forcings: list[ForcingInputs] = []
     doy0 = 120
@@ -41,6 +44,8 @@ def create_truth(
     obs_params: ObservationParams,
     seed: int = 42,
 ):
+    """生成“真实”土壤湿度/植被状态及对应的反射率观测。"""
+
     rng = np.random.default_rng(seed)
     num_steps = len(forcings)
     truth_states = np.zeros((num_steps, 2))
@@ -59,6 +64,8 @@ def create_truth(
 
 
 def main() -> None:
+    """执行模拟并打印关键统计量。"""
+
     np.set_printoptions(precision=3, suppress=True)
 
     process_model = ProcessModel()
