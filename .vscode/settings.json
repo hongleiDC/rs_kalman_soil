@@ -1,8 +1,6 @@
 {
-    "jupyter.widgetScriptSources": [
+    "python.terminal.activateEnvironment": true,
+    "python.condaPath": "/home/hl/miniconda3/bin/conda",
+    "python.defaultInterpreterPath": "/home/hl/miniconda3/envs/rs_kalman_soil/bin/python"
 
-    ],
-    "python-envs.pythonProjects": [
-
-    ],
 }

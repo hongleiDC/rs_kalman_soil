@@ -45,10 +45,10 @@ conda create -n gnssr_enkf python=3.10
 conda activate gnssr_enkf
 
 # 合成实验所需依赖
-conda install -c conda-forge numpy matplotlib
+conda install -c conda-forge numpy matplotlib 
 
 # 真实数据工作流额外依赖
-conda install -c conda-forge pandas xarray netcdf4 h5netcdf
+conda install -c conda-forge pandas xarray netcdf4 h5netcdf earthaccess geopandas
 
 # 如需运行 Jupyter 笔记本
 conda install -c conda-forge jupyterlab
