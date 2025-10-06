@@ -1,0 +1,17 @@
+{
+  "imerg": {
+    "dataset_id": "NASA/GPM_L3/IMERG_V07",
+    "has_data": true,
+    "image_count": 1440
+  },
+  "era5_land": {
+    "dataset_id": "ECMWF/ERA5_LAND/DAILY_AGGR",
+    "has_data": true,
+    "image_count": 30
+  },
+  "modis_ndvi": {
+    "dataset_id": "MODIS/061/MOD13Q1",
+    "has_data": true,
+    "image_count": 2
+  }
+}

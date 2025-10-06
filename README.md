@@ -41,17 +41,22 @@
 推荐使用 Conda 创建隔离环境：
 
 ```bash
-conda create -n gnssr_enkf python=3.10
-conda activate gnssr_enkf
+
+conda create -n rs_kalman_soil python=3.10
+conda activate rs_kalman_soil
+
+# 下载数据所需依赖
+conda install -c conda-forge cdsapi
 
 # 合成实验所需依赖
-conda install -c conda-forge numpy matplotlib 
+conda install -c conda-forge numpy matplotlib geemap
 
 # 真实数据工作流额外依赖
 conda install -c conda-forge pandas xarray netcdf4 h5netcdf earthaccess geopandas
 
 # 如需运行 Jupyter 笔记本
 conda install -c conda-forge jupyterlab
+
 ```
 
 ## 快速开始
@@ -70,6 +75,7 @@ conda install -c conda-forge jupyterlab
 
 1. 准备以下数据并将文件路径填入 `src/run_real_data.py` 的 `DataCatalog`：
    - **GPM IMERG**：2021-07-01 至 2021-07-31 的降水数据（NetCDF/HDF）。
+     - shortname:GPM_3IMERGHHE
    - **ERA5-Land**：包含变量 `t2m`、`pev` 的再分析数据。
    - **CYGNSS Level 1/2**：含反射率与入射角的 GNSS-R 观测。
    - **土壤质地**：如 SoilGrids sand/clay 分数的静态网格文件。

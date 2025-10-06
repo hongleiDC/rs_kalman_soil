@@ -1,0 +1,24 @@
+{
+  "state_init_mean": [
+    0.25,
+    1.0
+  ],
+  "state_init_std": [
+    0.02,
+    0.4
+  ],
+  "Q_std": [
+    0.015,
+    0.15
+  ],
+  "R_std": [
+    0.02
+  ],
+  "obs_params": {
+    "inc_angle_deg": 40.0,
+    "surf_rms_height_m": 0.01,
+    "veg_b": 0.12,
+    "soil_temp_K": 295.0
+  },
+  "ensemble_size": 50
+}

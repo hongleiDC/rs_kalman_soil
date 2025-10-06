@@ -1,6 +1,17 @@
 {
+    // Python 解释器设置
+    "python.defaultInterpreterPath": "/home/hl/miniconda3/envs/rs_kalman_soil/bin/python",
+    "python.condaPath": "/home/hl/miniconda3/condabin/conda",
     "python.terminal.activateEnvironment": true,
-    "python.condaPath": "/home/hl/miniconda3/bin/conda",
-    "python.defaultInterpreterPath": "/home/hl/miniconda3/envs/rs_kalman_soil/bin/python"
-
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    // 终端环境变量
+    "terminal.integrated.env.linux": {
+        "CONDA_DEFAULT_ENV": "rs_kalman_soil",
+        "CONDA_PREFIX": "/home/hl/miniconda3/envs/rs_kalman_soil",
+    },
+    // Jupyter 设置
+    "jupyter.defaultKernel": "rs_kalman_soil",
+    // 其他有用的设置
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true
 }
